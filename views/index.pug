@@ -3,3 +3,51 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  // Start #Wrapper
+  #wrapper
+      // START #userInfo
+      #userInfo
+          h2 User Info
+          p
+            strong Name:
+            |   <span id = 'userInfoName'></span>
+            br
+            strong Age:
+            |   <span id = 'userInfoAge'></span>
+            br
+            strong Gender:
+            |   <span id = 'userInfoGenger'></span>
+            br
+            strong Location:
+            |   <span id = 'userInfoLocation'></span>
+            br
+      // END #userInfo
+
+      //START #userList
+      #userList
+          h2 User List
+              table
+                  thead
+                      th userName
+                      th Email
+                      th Option
+                  tbody
+      // END #userList
+
+      // START #addUser
+      #addUser
+          h2 Add User
+          fieldset
+            input#inputUserName(type='text', placeholder='Username')
+            input#inputUserEmail(type='text', placeholder='Email')
+            br
+            input#inputUserFullName(type='text', placeholder='Full Name')
+            input#inputUserAge(type='text', placeholder='Age')
+            br
+            input#inputUserLocation(type='text', placeholder='Location')
+            input#inputUserGender(type='text', placeholder='Gender')
+            br
+            button#btnAddUser Add User
+      // END #addUser
+  // END #wrapper
